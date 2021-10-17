@@ -1,13 +1,113 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+html{
+  font-size: 62.5%; /* 16px x 62.5 = 10px = 1rem */
+  box-sizing: border-box;
+}
+body{
+  margin: 0; /* removing margin around boxes*/
+  height: 100vh; /* vh = viewport height */
+  font-size: 1.6rem; /* equal to 16px */
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root{
+  height: 100%;
 }
+
+/*Layout for html file*/
+.grid-container{
+  display: grid;
+  grid-template-areas: 
+  'header'
+  'main'
+  'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;  /*Header(5rem), Main(1fr),Footer(5rem)*/
+  height: 100%;
+}
+
+header{
+  grid-area: header;/*connecting this header to the HEADER template above*/
+  background-color: rgb(4, 155, 155);
+}
+main{
+  grid-area: main;/*connecting this header to the MAIN template above*/
+  padding: 1rem;
+}
+footer{
+  grid-area: footer;/*connecting this header to the FOOTER template above*/
+  background-color: rgb(4, 155, 155);
+  color: white;
+}
+/*Commom Classes*/
+h1{
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2{
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+a{
+  text-decoration: none; /*removes underline from links*/
+}
+a:hover{
+  color: yellowgreen;
+}
+/*Header*/
+header a{
+color: white;
+padding: 1rem;
+}
+a.brand{
+  color: white;
+  font-size: 3rem ;
+  font-weight: bold;
+}
+
+/*Using flex, set a row class, used in header tag in the html file*/
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.row.center{ /*used to center the content in the footer*/
+  justify-content: center;
+}
+/*images*/
+img{
+  border-radius: 0.5rem;
+}
+img.medium{
+  max-width: 29rem;
+  width: 100%;
+}   
+
+/*Card*/
+.card{
+border: 0.1rem grey solid;
+background-color: rgb(207, 202, 202);
+border-radius: 0.5rem;
+margin: 1rem;
+}
+.card-body{
+  padding: 1rem;
+}
+.card-body > *{ /* <-- applies to all the children of card-body*/
+margin-bottom: 0.5rem; /* <-- to create space between items*/
+}
+.price{
+  font-size: 2rem;
+}
+/*Rating*/
+.rating span{
+  color: gold;
+  margin:0.1rem ;
+}
+.rating span:last-child{
+  color: black;
+} 
+
+
+
