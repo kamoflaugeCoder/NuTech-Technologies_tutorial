@@ -1,9 +1,14 @@
 import React from 'react';
-import Data from './data'
-import Product from './components/Product'
+import {BrowserRouter, Route} from 'react-router-dom';
+// import Data from './data';
+
+// import Product from './components/Product';
+import ProductScreen from './components/screens/ProductScreen';
+import HomeScreen from './components/screens/HomeScreen';
 
 function App() {
   return (
+<BrowserRouter>
     <div className="grid-container">
 			<header className="row">
 				<div>
@@ -16,17 +21,15 @@ function App() {
 					<a href="/signin">Sign In</a>
 				</div>
 			</header>
-			<main>
-				<div className="row center">
-          {Data.products.map((product) => (
-            /*first element after map should have a key attribute*/
-            /*Passing the product component to the product array here*/
-            <Product roduct key={product._id} product={product}></Product>
-            ))}
-				</div>
+      {/* Routes are create in the main section */}
+			<main> 
+        <Route path="/product/:id" component={ProductScreen}></Route>
+        <Route path="/" component={HomeScreen} exact></Route>
+        
 			</main>
 			<footer className="row center">All right reserved</footer>
 		</div>
+    </BrowserRouter>
   );
 }
 

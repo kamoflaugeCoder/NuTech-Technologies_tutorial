@@ -54,6 +54,34 @@ a{
 a:hover{
   color: yellowgreen;
 }
+ul{
+  padding: 0;
+  margin: 0;
+  list-style-type: none; /*removed bullet points*/
+}
+li{
+  margin-top: 1rem;
+}
+button{
+  padding:1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem lightgray solid;
+  font-size: 1.6rem; /* equal to 16px */
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(187, 186, 186);
+  cursor: pointer;
+}
+button:hover{
+  border: 0.1rem black solid;
+}
+button.primary{
+  background-color: rgb(4, 155, 155);
+}
+button.block{
+  width: 100%;
+}
 /*Header*/
 header a{
 color: white;
@@ -75,6 +103,15 @@ a.brand{
 .row.center{ /*used to center the content in the footer*/
   justify-content: center;
 }
+.row.top{
+  align-items:flex-start;
+}
+.col-1{
+  flex: 1 1 25rem; /*1 of 4 | 1= makes it changeable | width of column */
+}
+.col-2{
+  flex: 2 1 50rem; /*1 of 4 | 1= makes it changeable | width of column */
+}
 /*images*/
 img{
   border-radius: 0.5rem;
@@ -82,12 +119,15 @@ img{
 img.medium{
   max-width: 29rem;
   width: 100%;
+}
+img.large{
+  width:100%;
 }   
 
 /*Card*/
 .card{
-border: 0.1rem grey solid;
-background-color: rgb(207, 202, 202);
+border: 0.1rem lightgray solid;
+background-color: rgb(228, 224, 224);
 border-radius: 0.5rem;
 margin: 1rem;
 }
@@ -108,6 +148,12 @@ margin-bottom: 0.5rem; /* <-- to create space between items*/
 .rating span:last-child{
   color: black;
 } 
-
+/*Alert*/
+.success{
+  color: green;
+}
+.error{
+  color: red;
+}
 
 
