@@ -3,8 +3,8 @@ import {BrowserRouter, Route} from 'react-router-dom';
 // import Data from './data';
 
 // import Product from './components/Product';
-import ProductScreen from './components/screens/ProductScreen';
-import HomeScreen from './components/screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen';
+import HomeScreen from './screens/HomeScreen';
 
 function App() {
   return (
