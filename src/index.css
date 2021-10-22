@@ -155,5 +155,18 @@ margin-bottom: 0.5rem; /* <-- to create space between items*/
 .error{
   color: red;
 }
+.alert{
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+.alert-info{
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+.alert-dander{
+  color: red;
+  background-color: #ffe0e0e0;
+}
 
 
